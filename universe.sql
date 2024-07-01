@@ -1,4 +1,5 @@
-CREATE DATABASE universe;
+psql --username=freecodecamp --dbanme=postgres
+    CREATE DATABASE universe;
 \c universe
 CREATE TABLE galaxy (
     galaxy_id SERIAL PRIMARY KEY,
@@ -132,3 +133,4 @@ universe-> ('Kuiper Belt', 'Beyond Neptune', 100000, TRUE),
 universe-> ('Oort Cloud', 'Outer edge of solar system', 10000, TRUE);
 INSERT 0 3
 universe=> pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+    psql -U postgres < universe.sql
